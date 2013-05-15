@@ -1,10 +1,10 @@
-target_col = 6 #est_counts
+require 'yaml'
 
-names = ["idx2", "idx4", "idx5", "idx6", "idx7",  #female eggs          
-         "idx12", "idx13", "idx14", "idx15", "idx16",  #male eggs         
-         "idx18", # female larvae
-         "idx19", # male larvae
-        ]
+conffile = ARGV[0]
+conf = YAML.load(File.open(conffile).read)
+
+STDERR.puts conf.inspect
+
 
 COLUMN_NAMES = %w{
 bundle_id       
@@ -22,14 +22,18 @@ fpkm_conf_low
 fpkm_conf_high  
 solvable}
 
+
+names = conf['names']
+
 data = {}
+
 names.each do |name|
   data[name] = {}
-  File.open("#{name}/express_out/results.xprs").each_with_index do |l, i|
+  File.open("#{name}/#{conf['result_dir']}/results.xprs").each_with_index do |l, i|
     next if i == 0
     a = l.chomp.split(/\t/, -1)
     id = a[1]
-    val = a[target_col]
+    val = a[conf['target_col']]
     data[name][id] = val
   end
 end
@@ -42,7 +46,7 @@ puts "# source:"
 names.each do |n|
   puts "#   #{n}/express_out/results.xprs"
 end
-puts "# target column: " + COLUMN_NAMES.at(target_col)
+puts "# target column: " + COLUMN_NAMES.at(conf['target_col'])
 puts "# script: #{__FILE__}"
 puts "# date:   #{Time.now}"
 puts "# author: Shuji Shigenobu <shige@nibb.ac.jp>"

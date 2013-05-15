@@ -1,0 +1,18 @@
+target_col: 6   #est_counts
+# target_col: 10  #fpkm
+
+names:
+- idx2  #FE
+- idx4  #FE
+- idx5  #FE
+- idx6  #FE
+- idx7  #FE
+- idx12 #ME
+- idx13 #ME
+- idx14 #ME
+- idx15 #ME
+- idx16 #ME
+- idx18 #FL
+- idx19 #ML
+
+result_dir: express_out
