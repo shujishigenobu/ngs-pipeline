@@ -1,16 +1,26 @@
 #!/bin/sh
 
+#=== conf ===
+REFIDX=Trinity.fasta
+NCPU=8
+#
+# Note)
+# This template is used for generating batch scripts using ezjob utility
+#
+# IMPORTANT)
+# If you are aligning phred64-format fastq,
+# --phred64 should be added to bowtie2 option below 
+#===
+
+
 NAME=%NAME% 
 # ex) idx12_single
 
 SEQ1=%SEQ1%
 SEQ2=%SEQ2%
 
-OUTSAM=hits.sam
+OUTBAM=hits.bam
 
-REFIDX=Trinity.Ntak_121217p11.fa
-
-NCPU=8
 
 mkdir $NAME
 
@@ -19,9 +29,8 @@ bowtie2 -a \
  -p $NCPU \
  -x $REFIDX \
  --end-to-end \
- --phred64 \
- -S $NAME/hits.sam
-
+ | samtools view -bS - \
+ > $NAME/$OUTBAM
 
 echo "Finished: " `date`
 

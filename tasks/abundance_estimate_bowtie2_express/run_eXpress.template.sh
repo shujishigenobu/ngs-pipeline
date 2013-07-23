@@ -1,9 +1,14 @@
-NAME=%NAME%
+#=== config ===
 NCPU=8
+REF=Trinity.fasta
+#===
+
+NAME=%NAME%
+
 OUTDIR=$NAME/express_out
  
-BAM=$NAME/hits.sam
-REF=Trinity.Ntak_121217p11.fa
+BAM=$NAME/hits.bam
+
  
 express \
  -p $NCPU \
