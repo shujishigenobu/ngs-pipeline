@@ -1,6 +1,10 @@
 target_col: 6   #est_counts
 # target_col: 10  #fpkm
 
+# target_col: 7   #eff_counts
+# target_col: 5   #uniq_counts
+# target_col: 4   #tot_counts
+
 names:
 - idx2  #FE
 - idx4  #FE
