@@ -28,10 +28,12 @@ echo running on `hostname`
 echo started at `date`
   
 $TRINITY_BASE/Trinity.pl \
-     --prep \
      --JM $JM \
      --seqType fq \
      --min_kmer_cov $MIN_KMER_COV \
      --left $SEQ1  --right $SEQ2 \
      --CPU $NCPU \
-     --output $OUT
+     --output $OUT \
+
+
+#     --prep \  # add this if you want to exit before jellyfish step.
