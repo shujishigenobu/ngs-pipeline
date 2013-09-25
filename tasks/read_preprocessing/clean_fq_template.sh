@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DATADIR=../../Data/Illumina_Runs/120117_SN676_0100_BD0EM9ABXX/Lane_08_Hayashi
+DATADIR=./
 INPUT=$DATADIR/<%= FILE_NAME %>
 
 QV=30
@@ -13,7 +13,7 @@ ADPT2=AATGATACGGCGACCACCGAGATCTACACTCTTTCCCTACACGACGCTCTTCCGATCT
 ## These above are normal TruSeq adaptors
 
 INPUT_EXT=`basename $INPUT .gz`
-OUTPUT=`basename $INPUT_EXT .fq`.clnq$QV.fq
+OUTPUT=`basename $INPUT_EXT .fastq`.clnq$QV.fq
 
 # zcat $INPUT > $INPUT_EXT
 cutadapt -b $ADPT1 -b $ADPT2 --quality-base=$QB -q $QV $INPUT  > $OUTPUT.tmp
