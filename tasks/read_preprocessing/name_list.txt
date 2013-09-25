@@ -1,0 +1,12 @@
+s_8_1_10_sequence.txt.gz
+s_8_1_11_sequence.txt.gz
+s_8_1_12_sequence.txt.gz
+s_8_1_7_sequence.txt.gz
+s_8_1_8_sequence.txt.gz
+s_8_1_9_sequence.txt.gz
+s_8_2_10_sequence.txt.gz
+s_8_2_11_sequence.txt.gz
+s_8_2_12_sequence.txt.gz
+s_8_2_7_sequence.txt.gz
+s_8_2_8_sequence.txt.gz
+s_8_2_9_sequence.txt.gz
