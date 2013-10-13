@@ -13,7 +13,7 @@ end
 scr0 = "run_formatdb.sh"
 File.open(scr0, "w"){|o|
   o.puts "formatdb -i #{sp1}"
-  o.puts "formatdn -i #{sp2}"
+  o.puts "formatdb -i #{sp2}"
 }
 
 sge = "sge_submission.sh"
