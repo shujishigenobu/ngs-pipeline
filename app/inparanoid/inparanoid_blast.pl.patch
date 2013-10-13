@@ -1,6 +1,35 @@
---- inparanoid.pl	2013-10-14 04:28:21.157314000 +0900
-+++ inparanoid_blast.pl	2013-10-14 04:47:37.092838806 +0900
-@@ -56,7 +56,7 @@
+--- inparanoid.pl	2009-10-09 22:51:21.000000000 +0900
++++ inparanoid_blast.pl	2013-10-14 05:25:24.614074202 +0900
+@@ -1,4 +1,5 @@
+ #! /usr/bin/perl
++
+ ###############################################################################
+ # InParanoid version 4.1
+ # Copyright (C) Erik Sonnhammer, Kristoffer Forslund, Isabella Pekkari, 
+@@ -16,7 +17,12 @@
+ # NOTE: This script requires blastall (NCBI BLAST) version 2.2.16 or higher, that supports 
+ # compositional score matrix adjustment (-C2 flag).
+ 
+-my $usage =" Usage: inparanoid.pl <FASTAFILE with sequences of species A> <FASTAFILE with sequences of species B> [FASTAFILE with sequences of species C]
++#######################
++# inparanoid_blast.pl
++# by Shuji Shigenobu <shige@nibb.ac.jp>
++# a patch applied to original inparanoid.pl to create a script specialized for BLASTing.
++
++my $usage =" Usage: inparanoid_blast.pl FASTA1 [FASTA2]
+ 
+ ";
+ 
+@@ -46,7 +52,7 @@
+                  # and parser 'blast_parser.pl'                               #
+ $blast_two_passes = 1;  # Set to 1 to run 2-pass strategy                     #
+                  # (strongly recommended, but slower)                         #
+-$run_inparanoid = 1;
++$run_inparanoid = 0;
+ $use_bootstrap = 1;# Use bootstrapping to estimate the confidence of orthologs#
+                    # Needs additional programs 'seqstat.jar' and 'blast2faa.pl'
+ $use_outgroup = 0; # Use proteins from the third genome as an outgroup        #
+@@ -56,7 +62,7 @@
  
  # Define location of files and programs:
  #$blastall = "blastall -VT"; #Remove -VT for blast version 2.2.12 or earlier
@@ -9,7 +38,7 @@
  $formatdb = "formatdb"; 
  $seqstat = "seqstat.jar";
  $blastParser = "blast_parser.pl";
-@@ -268,13 +268,13 @@
+@@ -268,13 +274,13 @@
  # want two-pass blasting anyway which is not implemented here
  # this is also not adapted to use specific compositional adjustment settings
  # and might not use the proper blast parser...
