@@ -1,5 +1,5 @@
 --- inparanoid.pl	2009-10-09 22:51:21.000000000 +0900
-+++ inparanoid_blast.pl	2013-10-14 05:25:24.614074202 +0900
++++ inparanoid_blast.pl	2013-10-14 05:50:25.345243453 +0900
 @@ -1,4 +1,5 @@
  #! /usr/bin/perl
 +
@@ -45,7 +45,7 @@
 -
 -    do_blast ($fasta_seq_fileA, $fasta_seq_fileA, $A, $A, $blast_outputAA);
 +    
-+    if (@ATGV == 1) {
++    if (@ARGV == 1) {
 +	do_blast ($fasta_seq_fileA, $fasta_seq_fileA, $A, $A, $blast_outputAA);
 +    }
  
