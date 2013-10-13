@@ -1,0 +1,29 @@
+--- inparanoid.pl	2013-10-14 04:28:21.157314000 +0900
++++ inparanoid_blast.pl	2013-10-14 04:47:37.092838806 +0900
+@@ -56,7 +56,7 @@
+ 
+ # Define location of files and programs:
+ #$blastall = "blastall -VT"; #Remove -VT for blast version 2.2.12 or earlier
+-$blastall = "blastall";  #Add -aN to use N processors
++$blastall = "blastall -a 8 ";  #Add -aN to use N processors
+ $formatdb = "formatdb"; 
+ $seqstat = "seqstat.jar";
+ $blastParser = "blast_parser.pl";
+@@ -268,13 +268,13 @@
+ # want two-pass blasting anyway which is not implemented here
+ # this is also not adapted to use specific compositional adjustment settings
+ # and might not use the proper blast parser...
+-
+-    do_blast ($fasta_seq_fileA, $fasta_seq_fileA, $A, $A, $blast_outputAA);
++    
++    if (@ATGV == 1) {
++	do_blast ($fasta_seq_fileA, $fasta_seq_fileA, $A, $A, $blast_outputAA);
++    }
+ 
+     if (@ARGV >= 2) {
+       do_blast ($fasta_seq_fileA, $fasta_seq_fileB, $B, $B, $blast_outputAB);
+-      do_blast ($fasta_seq_fileB, $fasta_seq_fileA, $A, $A, $blast_outputBA);
+-      do_blast ($fasta_seq_fileB, $fasta_seq_fileB, $B, $B, $blast_outputBB);
+     }
+ 
+     if ($use_outgroup){
