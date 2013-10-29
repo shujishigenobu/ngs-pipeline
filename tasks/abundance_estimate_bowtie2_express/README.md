@@ -7,7 +7,9 @@ abundance_estimate_bowtie2_express
 
 1) Prepare `alignReads.conf`
 
-2) Edit `build_conf_from_leftlist.rb` and `alignReads.template.sh`
+If you use standard Illumina reads as inputs, `build_conf_from_leftlist.rb` is useful to build the conf file. Prepare list of R1 files and then convert the R1 flist into alignReads.conf by using the script.
+
+2) Edit `alignReads.template.sh`
 
 3) Generate batch job scripts using `ezjob`.
 
