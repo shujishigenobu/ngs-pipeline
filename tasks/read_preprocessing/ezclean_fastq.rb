@@ -9,7 +9,7 @@ File.open($fastqf).each_with_index do |l, i|
   n = i % 4
   case n
   when 0
-    unless  /^@HWI/.match(l)
+    unless  /^@/.match(l)
       raise "Invalid FASTQ format"
     end
     puts l
