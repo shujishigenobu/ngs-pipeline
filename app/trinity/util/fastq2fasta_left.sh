@@ -1,0 +1,1 @@
+sh fastq2fasta.sh "s_8_1_10_sequence.txt.clnq30.fq  s_8_1_12_sequence.txt.clnq30.fq  s_8_1_8_sequence.txt.clnq30.fq s_8_1_11_sequence.txt.clnq30.fq  s_8_1_7_sequence.txt.clnq30.fq   s_8_1_9_sequence.txt.clnq30.fq " left.fa
