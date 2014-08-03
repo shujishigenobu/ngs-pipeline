@@ -1,0 +1,1 @@
+../abundance_estimate_bowtie2_express/run_bowtie2build.sh
