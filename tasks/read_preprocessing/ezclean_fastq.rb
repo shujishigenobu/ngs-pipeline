@@ -26,7 +26,7 @@ File.open($fastqf).each_with_index do |l, i|
     puts l
   when 3
     if  l.chomp.size < $min_len
-      puts "H"
+      puts "!"
     else
       puts l
     end
