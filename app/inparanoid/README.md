@@ -1,6 +1,4 @@
-# Overview
-
-## What's this?
+# What's this?
 
 inparanoid is developed by Dr. Sonnhammer and his collegues (Stockholm Bioinformatics Centre)
 
@@ -20,7 +18,17 @@ These scripts in my repository are utilities for running and post-processing inp
 
 3-2) prepare target fasta files
 
+```
+(example)
+ $ ln -s ../Maur_proteins.pep.fa Maur
+ $ ln -s ../MMUSC.Mus_musculus.fas.renamed Mmus
+```
+
 4) run `build_batch_inpblast.rb`
+
+```
+ruby build_batch_inpblast.rb Mmus Maur inparanoid_blast
+```
 
 5) submit jobs to sge by runnning `sge_submission.sh`
 
