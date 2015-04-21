@@ -1,5 +1,14 @@
+# Overview
 
-## How to run?
+## What's this?
+
+inparanoid is developed by Dr. Sonnhammer and his collegues (Stockholm Bioinformatics Centre)
+
+These scripts in my repository are utilities for running and post-processing inparanoid.
+
+# Run inparanoid on cluster computers
+
+## Overview
 
 1) Prepare original inparanoid dir.
 
@@ -33,3 +42,7 @@ or
    inparanoid_blast.pl FASTA1 FASTA2
    => BLAST FASTA1-FASTA2  # FASTA2-FASTA1 is not calculated
 ```
+
+# References
+
+- http://inparanoid.sbc.su.se/
