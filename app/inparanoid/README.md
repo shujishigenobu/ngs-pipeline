@@ -30,7 +30,21 @@ These scripts in my repository are utilities for running and post-processing inp
 ruby build_batch_inpblast.rb Mmus Maur inparanoid_blast
 ```
 
-5) submit jobs to sge by runnning `sge_submission.sh`
+5) submit jobs for BLAST searches by runnning `sge_submission.sh`
+
+Wait until all BLAST batch jobs are complete.
+
+6) copy original inparanoid dir as `inparanoid_grouping`. move in `inparanoid_grouping``
+
+7) generate the script `inparanoid_grouping.pl.patch` 
+
+```
+patch -o inparanoid_grouping.pl -u inparanoid.pl < ../inparanoid_grouping.pl.patch
+```
+
+8) edit `run_inparablast-grouping.sh`. and run it.
+
+
 
 ## inparanoid_blast.pl.patch
 
