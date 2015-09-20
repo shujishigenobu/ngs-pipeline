@@ -1,0 +1,11 @@
+--- inparanoid.pl~	2009-10-09 22:51:21.000000000 +0900
++++ inparanoid.pl	2015-09-20 21:41:03.521441721 +0900
+@@ -41,7 +41,7 @@ my $usage =" Usage: inparanoid.pl <FASTA
+ ###############################################################################
+ 
+ # What do you want the program to do?                                         #
+-$run_blast = 1;  # Set to 1 if you don't have the 4 BLAST output files        #
++$run_blast = 0;  # Set to 1 if you don't have the 4 BLAST output files        #
+                  # Requires 'blastall', 'formatdb' (NCBI BLAST2)              #
+                  # and parser 'blast_parser.pl'                               #
+ $blast_two_passes = 1;  # Set to 1 to run 2-pass strategy                     #
