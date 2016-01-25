@@ -1,5 +1,9 @@
 #!/bin/sh
-
+#
+# WARNING: this script still works well, but a newer one run_cutadapt.PE.template.sh
+# is recommended because the nerwer is designed to work with the latest cutadapt that
+# can treat PE reads properly.
+#
 DATADIR=./
 INPUT=$DATADIR/<%= FILE_NAME %>
 #idx11_GGCTAC_L007_R2_001.fastq
