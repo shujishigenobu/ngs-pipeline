@@ -1,4 +1,4 @@
-QUERY=../Trinity_OdoFor140420.fa
+QUERY=$1
 DB=/home/DB/public/processed/SILVA/release_108/LSURef_108_tax_silva.fasta
 FORMAT=6
 #FORMAT=0
