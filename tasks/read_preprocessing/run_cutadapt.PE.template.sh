@@ -19,14 +19,14 @@ IDX_CONS=AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC
 
 QV=30
 O=8
-MINCUT=50
-INPUT1=SRR1999279_1.fastq.gz
-INPUT2=SRR1999279_2.fastq.gz
+MINCUT=25
+INPUT1=%SEQ1%
+INPUT2=%SEQ2%
 
 OUTPUT1=`basename $INPUT1 .fastq.gz`.cln.Q${QV}L${MINCUT}.fastq.gz
 OUTPUT2=`basename $INPUT2 .fastq.gz`.cln.Q${QV}L${MINCUT}.fastq.gz
 
-CUTADAPT=~/.local/bin/cutadapt
+CUTADAPT=cutadapt
 
 $CUTADAPT \
   -q $QV \
