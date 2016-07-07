@@ -42,7 +42,9 @@ Wait until all BLAST batch jobs are complete.
 patch -o inparanoid_grouping.pl -u inparanoid.pl < ../inparanoid_grouping.pl.patch
 ```
 
-8) edit `run_inparablast-grouping.sh`. and run it.
+8) make symbolic link to BLAST results in inparanoid_blast-*
+
+9) edit `run_inparablast-grouping.sh`. and run it.
 
 
 
