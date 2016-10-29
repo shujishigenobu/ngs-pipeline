@@ -1,3 +1,8 @@
+# Caution
+
+These tools for inparanoid analysis in this directory are discontinued. New tools are developed as a inparanoid_factory which is one of my bitbucket repo.
+
+
 # What's this?
 
 inparanoid is developed by Dr. Sonnhammer and his collegues (Stockholm Bioinformatics Centre)
