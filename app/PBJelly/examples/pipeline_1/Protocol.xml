@@ -1,0 +1,10 @@
+<jellyProtocol>
+    <reference>/home/shige/Projects/Preliminary/161112-pbjelly/LSRtest_161113a/ApisBuc1.genome.fasta</reference>  
+    <outputDir>/home/shige/Projects/Preliminary/161112-pbjelly/LSRtest_161113a</outputDir>
+    <blasr>-minMatch 8 -sdpTupleSize 8 -minPctIdentity 75 -bestn 1 -nCandidates 10 -maxScore -500 -nproc 24 -noSplitSubreads</blasr>
+    <input baseDir="/home/shige/Projects/Preliminary/161112-pbjelly/LSRtest_161113a/">
+        <job>filtered_subreads_019439.fastq</job>
+	<job>filtered_subreads_019440.fastq</job>
+	<job>filtered_subreads_019441.fastq</job>
+    </input>
+</jellyProtocol>
