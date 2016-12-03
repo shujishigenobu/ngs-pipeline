@@ -16,7 +16,7 @@ STDERR.puts "# sorting bam"
 if $name
   bam_sorted_out = $name + "." + File.basename(bam_unsorted, '.bam') + ".sorted.bam"
 else
-  bam_sorted_out = File.basename(bam_unsorted, '.bam') + ".sorted.bam"
+  bam_sorted_out = bam_unsorted.sub(/\.bam/, ".sorted.bam")
 end
 
 cmd = "samtools sort -m #{MAX_MEMORY} -o #{bam_sorted_out} -@ #{NCPU} #{bam_unsorted} "
