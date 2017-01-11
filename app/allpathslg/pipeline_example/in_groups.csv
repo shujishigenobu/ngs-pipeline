@@ -1,0 +1,5 @@
+                             file_name,         library_name,  group_name
+Reads/idx05_ACAGTG_S5_L001_R?_001.fastq.gz,            PE180,  x5L1
+Reads/idx05_ACAGTG_S29_L002_R?_001.fastq.gz,           PE180,  x5L2
+Reads/idx19_GTGAAA_S18_L001_R?_001.fastq.gz,           PE800,  x19L1
+Reads/idx19_GTGAAA_S42_L002_R?_001.fastq.gz,           PE800,  x19L2

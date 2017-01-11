@@ -1,0 +1,10 @@
+# An example of Allpaths-LG pipeline
+
+## Workflow overview
+
+1) Prepare two conf files: in_groups.csv  in_libs.csv
+
+2) Run prepare.sh
+
+3) Run assemble.sh
+

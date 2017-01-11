@@ -1,0 +1,3 @@
+library_name, project_name, organism_name,     type, paired, frag_size, frag_stddev, insert_size, insert_stddev, read_orientation, genomic_start, genomic_end
+PE180,       SvAo1,        Solidago_virgaurea,        fragment,      1,       180,          36,            ,              ,           inward,             0,           0
+PE800,       SvAo1,        Solidago_virgaurea,         jumping,      1,          ,            ,         800,           160,           inward,             0,           0
