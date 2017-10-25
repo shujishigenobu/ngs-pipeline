@@ -1,0 +1,23 @@
+#=== Pipeline notes ===
+
+## Typical workflow
+
+1) cutadaput 
+
+(scripts not included in this dir)
+
+2) mapping: hisat2
+
+* run_hisat2_PE.template.sh
+
+3) sort bam: samtools
+
+* batch_sort_bam.template.sh
+
+4) count: StringTie
+
+* run_stringtie_count.template.sh
+* prepDE.py
+
+prepDE.py is provided by StringTie authors. I downloaded this script as of StringTie v1.3.2d.
+
