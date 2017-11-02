@@ -38,11 +38,13 @@ ids = data[names[0]].keys.sort
 
 ## Read sample_info_file
 
-sample_info = {}
-File.open(conf['sample_info_file']).each do |l|
-  next if /^\#/.match(l)
-  a = l.chomp.split(/\t/)
-  sample_info[a[0]] = a
+if conf['sample_info_file']
+  sample_info = {}
+  File.open(conf['sample_info_file']).each do |l|
+    next if /^\#/.match(l)
+    a = l.chomp.split(/\t/)
+    sample_info[a[0]] = a
+  end
 end
 
 
@@ -53,9 +55,11 @@ source_files.each do |sf|
   puts "#   #{sf}"
 end
 puts "#"
-puts "# sample information"
-names.each do |n|
-  puts "#  #{sample_info[n].join("\t")}"
+if conf['sample_info_file']
+  puts "# sample information"
+  names.each do |n|
+    puts "#  #{sample_info[n].join("\t")}"
+  end
 end
 
 puts "# target column: " + COLUMN_NAMES.at(conf['target_col'])
@@ -64,7 +68,9 @@ puts "# date:   #{Time.now}"
 puts "# author: Shuji Shigenobu <shige@nibb.ac.jp>"
 puts "#"
 puts "# id\t" + names.join("\t")
-puts "# id\t" + names.map{|n| sample_info[n][1]}.join("\t")
+if conf['sample_info_file']
+  puts "# id\t" + names.map{|n| sample_info[n][1]}.join("\t")
+end
 
 ids.each do |id|
   values = names.map{|n| data[n][id]}

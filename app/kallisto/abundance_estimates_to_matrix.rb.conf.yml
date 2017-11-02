@@ -1,0 +1,44 @@
+target_col: 3   #est_counts
+# target_col: 4   #tpm
+
+names:
+- Haramoto17_lane1_idx01
+- Haramoto17_lane1_idx02
+- Haramoto17_lane1_idx03
+- Haramoto17_lane1_idx04
+- Haramoto17_lane1_idx05
+- Haramoto17_lane1_idx06
+- Haramoto17_lane2_idx01
+- Haramoto17_lane2_idx02
+- Haramoto17_lane2_idx03
+- Haramoto17_lane2_idx04
+- Haramoto17_lane2_idx05
+- Haramoto17_lane2_idx06
+- HayashiNIBB17_idx01
+- HayashiNIBB17_idx03
+- HayashiNIBB17_idx08
+- HayashiNIBB17_idx09
+- HayashiNIBB17_idx10
+- HayashiNIBB17_idx11
+- HayashiNIBB17_idx22
+- HayashiNIBB17_idx27
+- Matsunami16_brain
+- Matsunami16_E1
+- Matsunami16_E2
+- Matsunami16_intest
+- Matsunami16_kidney
+- Matsunami16_liver
+- Matsunami16_pancreas
+- Matsunami16_tail
+- Suzuki17_limb_blastema_0
+- Suzuki17_limb_blastema_19
+- Suzuki17_limb_blastema_3
+- Suzuki17_N_H
+- Suzuki17_R_H
+- Suzuki17_st25
+- Suzuki17_st30-2
+
+
+outdir_prefix: "kallisto_out_"
+
+#sample_info_file: "sample_info.txt"
