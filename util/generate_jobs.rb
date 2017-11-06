@@ -21,7 +21,7 @@ File.open(definition_file).each_with_index do |l, i|
   h = Hash.new
   script = template.dup
 
-  a = l.chomp.split
+  a = l.chomp.split(/\t/)
   keywords.zip(a) do |k, v|
     h[k] = v
   end
