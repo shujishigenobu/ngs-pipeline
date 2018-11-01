@@ -1,0 +1,4 @@
+A004	A004	../Reads_Cleaned_Combined/180919-trial1-15_S4_R1_A004.cln.Q30L25.fastq.gz	../Reads_Cleaned_Combined/180919-trial1-15_S4_R2_A004.cln.Q30L25.fastq.gz
+A016	A016	../Reads_Cleaned_Combined/180919-trial1-16_S16_R1_A016.cln.Q30L25.fastq.gz	../Reads_Cleaned_Combined/180919-trial1-16_S16_R2_A016.cln.Q30L25.fastq.gz
+A002	A002	../Reads_Cleaned_Combined/180919-trial1-17_S2_R1_A002.cln.Q30L25.fastq.gz	../Reads_Cleaned_Combined/180919-trial1-17_S2_R2_A002.cln.Q30L25.fastq.gz
+A007	A007	../Reads_Cleaned_Combined/180919-trial1-22_S7_R1_A007.cln.Q30L25.fastq.gz	../Reads_Cleaned_Combined/180919-trial1-22_S7_R2_A007.cln.Q30L25.fastq.gz
