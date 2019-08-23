@@ -1,0 +1,5 @@
+1) run_cutadapt24.PE.idx20L1.sh
+2) run_jellyfish_idx20.k21.sh
+3) run_genomescope.idx20.k21.sh
+
+cutadapt parameters were tuned to extract highly accurate paired reads in a fixed length.
