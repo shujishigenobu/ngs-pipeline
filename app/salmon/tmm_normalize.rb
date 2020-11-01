@@ -5,7 +5,7 @@ TEMPR = "tmm_norm.template.R"
 
 cols = []
 File.open(inputf).each do |l|
-  if m = /^\# id/.match(l)
+  if m = /^\#\s*id/.match(l)
     cols = m.post_match.strip.split(/\t/)
   end
 end

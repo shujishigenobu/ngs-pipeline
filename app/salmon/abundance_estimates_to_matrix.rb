@@ -65,7 +65,8 @@ end
 puts "# script: #{__FILE__}"
 puts "# date:   #{Time.now}"
 puts "#"
-puts "# id\t" + names.join("\t")
+puts "#id\t" + names.join("\t")
+
 if conf['sample_info_file']
   puts "# id\t" + names.map{|n| sample_info[n][1]}.join("\t")
 end
