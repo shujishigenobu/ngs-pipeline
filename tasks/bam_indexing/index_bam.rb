@@ -1,8 +1,8 @@
 #!/bin/ruby
 
 #=== config
-MAX_MEMORY = "24G"
-NCPU = 8
+MAX_MEMORY = "4G"
+NCPU = 40
 #===
 
 
@@ -24,7 +24,7 @@ IO.popen(cmd){}
 
 STDERR.puts "# indexing bam"
 STDERR.puts bam_sorted_out
-cmd = "samtools index #{bam_sorted_out}"
+cmd = "samtools index -@ #{NCPU} #{bam_sorted_out}"
 IO.popen(cmd){}
 
 #File.delete(bam_unsorted)
